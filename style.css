@@ -5,3 +5,16 @@
   padding:0;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  margin: 10px;
+  white-space: pre-line;
+}
