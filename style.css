@@ -18,3 +18,17 @@
   margin: 10px;
   white-space: pre-line;
 }
+
+.title {
+  text-align: center;
+  padding: 30px;
+}
+
+form {
+  text-align: center;
+}
+
+label, input {
+  display: block;
+  margin: 10px auto;
+}
