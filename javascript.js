@@ -81,6 +81,11 @@ confirmBtn.addEventListener("click", (event) => {
   delBtn.classList.add("del-btn");
   delBtn.textContent = "Delete";
   card.appendChild(delBtn);
+  const status = document.createElement("div");
+  status.textContent = "Unread";
+  status.style.backgroundColor = "red";
+  status.classList.add("status");
+  card.appendChild(status);
   nameInput.remove();
   nameLabel.remove();
   authorInput.remove();
@@ -99,6 +104,15 @@ container.addEventListener("click", (event) => {
   }
 })
 
+container.addEventListener("click", (event) => {
+  if (event.target.style.backgroundColor === "red") {
+    event.target.style.backgroundColor = "lightgreen";
+    event.target.textContent = "Read";
+  } else if (event.target.style.backgroundColor === "lightgreen") {
+    event.target.style.backgroundColor = "red";
+    event.target.textContent = "Unread";
+  }
+}) 
 
 
 
