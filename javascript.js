@@ -75,7 +75,11 @@ confirmBtn.addEventListener("click", (event) => {
   card.textContent = `Book Name: ${book.name}
   Author: ${book.author}
   Pages: ${book.pages}`;
+  card.dataset.id = book.id;
   container.appendChild(card);
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "Delete";
+  card.appendChild(delBtn);
   nameInput.remove();
   nameLabel.remove();
   authorInput.remove();
@@ -85,6 +89,9 @@ confirmBtn.addEventListener("click", (event) => {
   confirmBtn.remove();
   event.preventDefault();
 })
+
+
+
 
 
 
