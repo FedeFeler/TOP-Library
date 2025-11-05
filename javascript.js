@@ -78,6 +78,7 @@ confirmBtn.addEventListener("click", (event) => {
   card.dataset.id = book.id;
   container.appendChild(card);
   const delBtn = document.createElement("button");
+  delBtn.classList.add("del-btn");
   delBtn.textContent = "Delete";
   card.appendChild(delBtn);
   nameInput.remove();
@@ -88,6 +89,13 @@ confirmBtn.addEventListener("click", (event) => {
   pagesLabel.remove();
   confirmBtn.remove();
   event.preventDefault();
+});
+
+container.addEventListener("click", (event) => {
+  if (event.target.classList.contains("del-btn")) {
+    const card = event.target.parentElement;
+    card.remove();
+  }
 })
 
 
