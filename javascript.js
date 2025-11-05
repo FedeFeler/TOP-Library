@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(name, author, pages) {
   if (!new.target) {
@@ -95,6 +95,7 @@ container.addEventListener("click", (event) => {
   if (event.target.classList.contains("del-btn")) {
     const card = event.target.parentElement;
     card.remove();
+    myLibrary = myLibrary.filter(book => book.id !== card.dataset.id);
   }
 })
 
